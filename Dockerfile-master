@@ -30,10 +30,6 @@ COPY start-master.sh /opt/start-master.sh
 
 RUN chmod +x /opt/start-master.sh
 
-COPY ["spark-jobs/spark-jobs-poc-1.0.jar","spark-jobs/words-example.txt","/spark-jobs/"]
-
-RUN chmod +x /spark-jobs/spark-jobs-poc-1.0.jar
-
 COPY dropbear-setup-startup.sh /opt/dropbear-setup-startup.sh
 
 RUN chmod +x /opt/dropbear-setup-startup.sh
