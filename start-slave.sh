@@ -2,7 +2,7 @@
 
 echo "Starting Apache Spark  Slave)..."
 
-/opt/spark/sbin/start-slave.sh spark://9e7e7d904710:7077 
+/opt/spark/sbin/start-slave.sh spark://ip-192-168-2-200:7077
 
 if [ $? -eq 0 ]; then
         echo "  Slave up and running."
