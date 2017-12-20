@@ -6,7 +6,7 @@ docker network create --driver bridge gbcluster
 #   echo "AllowTcpForwarding already configured"
 #else
 #   echo "setting AllowTcpForwarding to yes"
-#   echo "AllowTcpForwarding yes" >> /etc/ssh/sshd_config
+#   sudo echo "AllowTcpForwarding yes" >> /etc/ssh/sshd_config
 #   sudo service ssh restart
 #fi
 docker build -t 'spark-master-alpine:3.6' .
