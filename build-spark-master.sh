@@ -11,4 +11,4 @@ docker network create --driver bridge gbcluster
 #fi
 docker build -t 'spark-master-alpine:3.6' .
 docker rm -f spark-master
-docker run --rm --name spark-master -v /home/vagrant/gb-spark-cluster:/home/vagrant/gb-spark-cluster --network=gbcluster -p7077:7077 -p8080:8080 -i -t spark-master-alpine:3.6
+docker run --rm --name spark-master  --mount source=~/sparkdata,target=/spark-jobs --network=gbcluster -p7077:7077 -p8080:8080 -i -t spark-master-alpine:3.6
